@@ -1,0 +1,51 @@
+﻿@model WebResume.Models.Information
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1> <b> @Html.DisplayFor(model => model.Name)'s </b> Resume</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name) </br>
+            <b> @Html.DisplayFor(model => model.Name) </b>
+            <b> @Html.DisplayFor(model => model.Surname) </b>
+        </dt>
+        <dd class="col-sm-10">
+            <b> @Html.DisplayNameFor(model => model.AboutMe) </b> </br>
+            @Html.DisplayFor(model => model.AboutMe)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email) </br>
+            @Html.DisplayFor(model => model.Email) </br>
+            </br>  @Html.DisplayNameFor(model => model.DateOfBirth) </br>
+            @Html.DisplayFor(model => model.DateOfBirth) </br>
+            </br> @Html.DisplayNameFor(model => model.PhoneNumber) </br>
+            (+383)@Html.DisplayFor(model => model.PhoneNumber)
+        </dt>
+        <dd class="col-sm-10">
+            <b> @Html.DisplayNameFor(model => model.Experience) </b> </br>
+            @Html.DisplayFor(model => model.Experience)
+        </dd>
+        <dt class="col-sm-2">
+
+        </dt>
+        <dd class="col-sm-10">
+            <b>  @Html.DisplayNameFor(model => model.Skills) </b></br>
+            @Html.DisplayFor(model => model.Skills)
+        </dd>
+        <dt class="col-sm-2">
+
+        </dt>
+        <dd class="col-sm-10">
+            <b> @Html.DisplayNameFor(model => model.Hobbies) </b> </br>
+            @Html.DisplayFor(model => model.Hobbies)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
